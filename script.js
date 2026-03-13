@@ -1,112 +1,108 @@
-const lista = document.querySelector(".lista-produtos ");
+const lista = document.querySelector(".lista-produtos")
 
 const cafe = [
     {
-        nome: "espresso",
-        descricao: "Café concentrado y aromático",
-        preco: "$3,50",
-        img: "./assets/imagens/comida/espresso.jpg"
+        nome: "Espresso",
+        descricao: "Cade concentrado e aromático",
+        preco: "$3.50",
+        img:" .assets/imagens/espresso.jpg"
     },
+
     {
-        nome: "cappuccino",
-        descricao: "Espresso con leche vaporizada y espuma",
-        preco: "$4,50",
-        img: "./assets/imagens/comida/cappuccino.jpg"
+        nome: "Cappuccino",
+        descricao: " Espresso com leite vaporizado e espuma",
+        preco: "$4.50",
+        img: ".assets/imagens/capuccino.jpg"
     },
+
     {
-        nome: "cafe helado",
-        descricao: "Refrescante café frío con hielo",
-        preco: "$5,00",
-        img: "./assets/imagens/comida/Cafe helado.jpg"
-    }
+        nome: "Café helado",
+        descricao: "Café frio resfrescante com gelo",
+        preco: "$5.00",
+        img: ".assets\imagens\comida\Cafe Helado.jpg"
+    },
 ]
 
-const bolo = [
+const reposteria = [
     {
-        nome: "Pastel de Chocolate",
-        descricao: "Delicioso pastel de chocolate com recheio cremoso",
-        preco: "$4,00",
-        img: "./assets/imagens/comida/pastel de chocolate.jpg"
+        nome: "Bolo de Chocolate",
+        descricao: "Delicioso bolo de chocolate caseiro",
+        preco: "$4.00",
+        img: ".assets\imagens\comida\bolo.jpg"
     },
+
     {
         nome: "Croissant",
-        descricao: "Croissant francés recién horneado",
-        preco: "$3,00",
-        img: "./assets/imagens/comida/croissant.jpg"
+        descricao: "Croissant francês recém açado",
+        preco: "$3.00",
+        img: "assets\imagens\comida\croissant.jpg"
     },
+
     {
-        nome: "Muffin de Arándanos",
-        descricao: "Esponjoso muffin con arándanos frescos",
-        preco: "$3,50",
-        img: "./assets/imagens/comida/muffin.jpg"
-    }
+        nome: "Muffin de arandanos",
+        descricao: "Muffin fofinho com mertilos frescos",
+        preco: "$3.50",
+        img: ".assets\imagens\comida\muffim.jpg"
+    },
 ]
 
 const comida = [
     {
-        nome: "Sándwich de Pavo",
-        descricao: "Sándwich fresco con pavo y vegetales",
-        preco: "$6,50",
-        img: "./assets/imagens/comida/sándwich de Pavo.jpg"
-    },
-    {
-     nome: "Ensalada César",
-     descricao: "Ensalada clásica con pollo a la parrilla y aderezo César",
-        preco: "$7,00",
-        img: "./assets/imagens/comida/salada.jpg"
-
+        nome: "Sandwich",
+        descricao: "Sanduíche fresco com peru e vegetais",
+        preco: "$6.50",
+        img: ".assets\imagens\comida\Sándwich de Pavo.jpg"
     },
 
     {
-        nome: "Quiche de Espinacas",
-        descricao: "Quiche de espinacas con queso y masa crujiente",
-        preco: "$5,50",
-        img: "./assets/imagens/comida/quiche.jpg"
+        nome: "quiche",
+        descricao: "Camadas de massa com carne e queijo gratinado",
+        preco: "$6.50",
+        img: ".assets\imagens\comida\quiche.jpg"
+    },
 
+    {
+        nome: "Salada pavo",
+        descricao: "Camadas de massa com carne e queijo gratinado",
+        preco: "$6.50",
+        img: ".assets\imagens\comida\salada.jpg"
     }
 
 ]
- function mostrarProdutos(produtos) {
 
+function mostrarProdutos(produtos) {
     lista.innerHTML = ""
 
-    produtos.forEach(produtos=> {
+    produtos.forEach(produto => {
 
-        lista.innerHTML += `<div class="caixa-cards">
-                <div class="card-popular">
-
-                    <div class="caixa-img-cards"><img class="img-cards" src=${produtos.img}    >
-                    </div>
+        lista.innerHTML += `
+        <div class="card-popular">
+                    <img class="img-cards" src="${produto.img}" alt="">
                     <div class="caixa-texto-card">
-
-                        <p class="titulo-card">${produtos.nome}</p>
-                        <p class="subtitulo-card">${produtos.descricao}</p>
-                        <div class="preco-btn-card">
-                            <p class="preco-card">${produtos.preco}</p>
-                            <button class="btn-card"> <i class="bi bi-cart2 card-btn"></i> Agregar</button>
-                        </div>
-
+                        <p class="titulo-card">${produto.nome}</p>
+                        <p class="subtitulo-card">${produto.descricao}</p>
                     </div>
-
+                    <div class="preco-btn-card">
+                        <p class="preco-card">${produto.preco}</p>
+                        <button class="btn-card"> 
+                            <i class="bi bi-cart2 card-btn"></i> 
+                            <p class="texto-btn-produto">Agregar</p> 
+                        </button>
+                    </div>
                 </div>
-        </div>
         `
+
     })
- }
+}
 
- document.querySelector(".btn-cafe").addEventListener("click",()=>{
+document.querySelector(".btn-cafe").addEventListener("click", () => {
     mostrarProdutos(cafe)
-
- })
-
- document.querySelector(".btn-confeitaria").addEventListener("click",()=>{
-    mostrarProdutos(bolo)
-
- })
-
- document.querySelector(".btn-comida").addEventListener("click",()=>{
+})
+document.querySelector(".btn-reposteria").addEventListener("click", () => {
+    mostrarProdutos(reposteria)
+})
+document.querySelector(".btn-comida").addEventListener("click", () => {
     mostrarProdutos(comida)
+})
 
- })
-
- mostrarProdutos(cafe)
+mostrarProdutos(cafe)
