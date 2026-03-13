@@ -5,21 +5,21 @@ const cafe = [
         nome: "Espresso",
         descricao: "Cade concentrado e aromático",
         preco: "$3.50",
-        img:" .assets/imagens/espresso.jpg"
+        img:"./assets/imagens/comida/espresso.jpg"
     },
 
     {
         nome: "Cappuccino",
         descricao: " Espresso com leite vaporizado e espuma",
         preco: "$4.50",
-        img: ".assets/imagens/capuccino.jpg"
+        img: "assets\\imagens\\comida\\capuccino.jpg"
     },
 
     {
         nome: "Café helado",
         descricao: "Café frio resfrescante com gelo",
         preco: "$5.00",
-        img: ".assets\imagens\comida\Cafe Helado.jpg"
+        img: "assets\\imagens\\comida\\Cafe Helado.jpg"
     },
 ]
 
@@ -28,21 +28,21 @@ const reposteria = [
         nome: "Bolo de Chocolate",
         descricao: "Delicioso bolo de chocolate caseiro",
         preco: "$4.00",
-        img: ".assets\imagens\comida\bolo.jpg"
+        img: "assets\\imagens\\comida\\bolo.jpg"
     },
 
     {
         nome: "Croissant",
         descricao: "Croissant francês recém açado",
         preco: "$3.00",
-        img: "assets\imagens\comida\croissant.jpg"
+        img: "assets\\imagens\\comida\\croissant.jpg"
     },
 
     {
         nome: "Muffin de arandanos",
         descricao: "Muffin fofinho com mertilos frescos",
         preco: "$3.50",
-        img: ".assets\imagens\comida\muffim.jpg"
+        img: "assets\\imagens\\comida\\muffim.jpg"
     },
 ]
 
@@ -51,21 +51,21 @@ const comida = [
         nome: "Sandwich",
         descricao: "Sanduíche fresco com peru e vegetais",
         preco: "$6.50",
-        img: ".assets\imagens\comida\Sándwich de Pavo.jpg"
+        img: "assets\\imagens\\comida\\Sándwich de Pavo.jpg"
     },
 
     {
         nome: "quiche",
         descricao: "Camadas de massa com carne e queijo gratinado",
         preco: "$6.50",
-        img: ".assets\imagens\comida\quiche.jpg"
+        img: "assets\\imagens\\comida\\quiche.jpg"
     },
 
     {
         nome: "Salada pavo",
         descricao: "Camadas de massa com carne e queijo gratinado",
         preco: "$6.50",
-        img: ".assets\imagens\comida\salada.jpg"
+        img: "assets\\imagens\\comida\\salada.jpg"
     }
 
 ]
